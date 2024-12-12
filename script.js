@@ -85,3 +85,4 @@ fetchFile()
 // Bonus oppgave:
 // 1. Lag en 'for loop' som gir ut alle fact resultatene
 
+// Oppgave etter lønsj: forklar hva som har skjedd i koden.
