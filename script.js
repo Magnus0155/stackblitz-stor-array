@@ -43,9 +43,45 @@ const data = [
   },
 ];
 
+/*Oppgave 2*/ 
+
+console.log("eksempel 1 log nr 5")
+
+console.log(data[5].fact);
+
+console.log("eksempel 2 loop")
+
+for(let index = 0; index < data.length; index++) {
+  console.log(data[index].fact);
+}
+
+console.log("eksempel 3 async")
+
+async function fetchFile() {
+  const dataFile = await fetch("https://catfact.ninja/facts");
+  console.log(dataFile);
+
+  const response = await dataFile.json();
+ // console.log (response.data[5].fact);
+ // console.log(response[5].fact);
+  for(let index = 0; index < response.length; index++){
+    console.log (response.data[index].fact);
+  }
+};
+
+fetchFile()
+//Oppgave 
+// 1. lag en 'for loop' som går gjennom variable response og viser alle fact
+
+//Bonus oppgave:
+//svar på oppgave 1 med en annen loop metode
+
+//!!!!!!! forskjellige oppgaver.
+
 // Oppgave:
 // 1: Se på variable 'data' og identifiser hva den inneholder.
 // 2: Skriv en consol.log ut resultatet som gir teksten "Cats make about 100 different sounds. Dogs make only about 10."
 
 // Bonus oppgave:
 // 1. Lag en 'for loop' som gir ut alle fact resultatene
+
